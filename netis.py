@@ -2,13 +2,10 @@
 # Exploit Author: fleetyeets
 # Cred: Elias Issa Netis WF2419 exploit
 # Vendor Homepage: http://www.netis-systems.com
-# Software Link: http://www.netis-systems.com/Suppory/downloads/dd/1/img/75
 # Date: 2022-09-03
 # Tested on: NETIS WF2409 V3.3.42541
 
-
-# Proof of Concept: python netis_rce.py http://192.168.1.1 "ls"
-
+# use: python3 netis.py http://[target][port_if_needed]
 #!/usr/bin/env python
 import argparse
 import requests
