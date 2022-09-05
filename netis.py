@@ -76,7 +76,7 @@ def main():
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(
-            description="Netis WF2419 Remote Code Execution Exploit (CVE-2019-1337) [TODO]")
+            description="Netis WF2409 Remote Code Execution Exploit")
     ap.add_argument("host", help="URL (Example: http://192.168.1.1).")
     args = ap.parse_args()
     main()
